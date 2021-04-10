@@ -27,10 +27,7 @@ function countBasketPrice(basket) {
 console.log(countBasketPrice(basket));
 
 // Задание 3 
-for (let i = 0; i < 9; i++) {// здесь пусто }
-    console.log(i);
-}
-
+for (let i = 0; i < 10; console.log(i++)) { }
 // Задание 4 
 var b = '';
 for (var i = 0; i < 20; i++) {
