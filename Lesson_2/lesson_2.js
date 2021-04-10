@@ -16,16 +16,17 @@ var x = 1 + (a *= 2);
 console.log(x) // получилось 5, так как *= это сокращенный оператор который присваивает умножение в итоге пример выгледит так: x = 1 + (a * 2);
 
 // Задание 3
-var a = 3;
-var b = -4;
+var a = +prompt('Введите первое число');
+var b = +prompt('Введите второе число');
+var x;
 
-if (a > 0 && b > 0) {
+if (a && b >= 0) {
     x = a - b;
     alert(x);
 } else if (a < 0 && b < 0) {
     x = a * b;
     alert(x);
-} else if (a > 0 && b < 0 || a < 0 && b > 0) {
+} else {
     x = a + b;
     alert(x)
 }
@@ -86,25 +87,21 @@ function division(a, b) {
 function multiplication(a, b) {
     return a * b;
 }
-alert(plus(1, 2));
-alert(minus(11, 5));
-alert(division(44, 11));
-alert(multiplication(22, 33));
 
 // Задание 6
 function mathOperation(arg1, arg2, operation) {
     switch (operation) {
         case '+':
-            return arg1 + arg2;
+            return plus(arg1, arg2);
 
         case '-':
-            return arg1 - arg2;
+            return minus(arg1, arg2);
 
         case '/':
-            return arg1 / arg2;
+            return division(arg1, arg2);
 
         case '*':
-            return arg1 * arg2;
+            return multiplication(arg1, arg2);
 
     }
 }
@@ -112,6 +109,7 @@ alert(mathOperation(11, 11, '-'))
 alert(mathOperation(11, 11, '+'))
 alert(mathOperation(11, 11, '*'))
 alert(mathOperation(11, 11, '/'))
+
 // Задание 8
 
 function power(val, pow) {
